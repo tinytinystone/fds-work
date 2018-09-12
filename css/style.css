@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* @import url("normalize.css"); */
+@import url("fonts.css");
+
+/* 초기화 스타일 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* clearfix */
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* 전체 레이아웃 */
+.header, .main, .slogan, .footer, .menu{
+  width: 1000px;
+  margin: 0 auto;
+}
+.article, .aside, .footer, .header, .nav, .section{
+  display: block;
+}
+
+/* 헤더 레이아웃 */
+.header{
+  position: relative;
+}
+.logo{
+  position: absolute;
+  width: 500px;
+  left: 0;
+  top: 5%;
+}
+
+/* member 영역 */
+.member{
+  text-align: right;
+  padding: 20px 0;
+}
+.member li, .member a{
+  display: inline;
+  padding-left: 13px;
+}
+.member li:nth-child(n+2)::before{
+  content: "|";
+}
+
+/* navigation */
+.navigation{
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #988574;
+  color: #fff;
+}
+.menu{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu a {
+  display: block;
+  padding: 5px 0;
+}
+.menu span{
+  display: block;
+  font-size: 1.3rem;
+  padding: 5px 0;
+}
+.menu ul{
+  margin-left: 10px;
+}
